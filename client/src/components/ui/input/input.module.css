@@ -1,0 +1,26 @@
+.input {
+	position: relative;
+}
+
+.field {
+	width: 100%;
+	font-size: 1rem;
+	padding: 0.6rem 1.2rem 0.6rem 0.4rem;
+    background-color: var(--input-background);
+	transition: background-color .3s ease;
+	color: #a1a1aa;
+	border: none;
+	border-radius: 0.3125rem;
+}
+
+.icon-wrapper {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	font-size: 1rem;
+	top: 0;
+	right: 0;
+	color: #52525B;
+    outline-color: var(--primary-color);
+}

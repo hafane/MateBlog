@@ -1,0 +1,56 @@
+.switcher {
+    display: inline-flex;
+    align-items: center;
+    max-width: fit-content;
+	position: relative;
+	width: 3rem;
+	height: 1.5rem;
+
+	.switcher_input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.00001;
+        cursor: pointer;
+        z-index: 1;
+
+        &:focus-visible + .switcher_slider {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+	}
+
+	.switcher_slider {
+        padding: 0 0.25rem;
+        display: inline-flex;
+        align-items: center;
+		width: 3rem;
+		height: 1.5rem;
+		background-color: var(--border-color-100);
+		border-radius: 9999px;
+        transition: background-color 0.2s ease-in-out;
+
+        > .switcher_slider-circle {
+            border-radius: 9999px;
+            width: 1.25rem;
+            height: 1.25rem;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            transition: margin-inline-start 0.2s ease-in-out;
+            background-color: var(--white-color);
+            background-image: url('../../../assets/Switcher_Sun.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+	}
+ 
+    &[data-checked="true"] > .switcher_slider {
+        background-color: var(--primary-color);
+
+        > .switcher_slider-circle {
+            margin-inline-start: 1.25rem;
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+.aside {
+    max-width: 392px;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 0.7rem;
+    border-left: 1px solid var(--secondary-700);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    bottom: 0;
+}
+
+.content {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.last-comments {
+    margin-bottom: 2rem;
+}
+
+.title {
+    margin: 1rem 0;
+}
+
+.title-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+.tags-block {
+    display: block;
+}
+
+.more {
+    margin-top: 1rem;
+}
+
+.more-text {
+    color: var(--secondary-400);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: var(--footer-links-color);
+    margin-left: 0.5rem;
+
+    &:not(:last-child)::after {
+        content: "|";
+        margin-left: 0.5rem;
+        opacity: 20%;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

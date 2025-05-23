@@ -1,0 +1,24 @@
+.header-wrapper {
+	padding-top: 32px;
+	margin-bottom: 32px;
+}
+
+.header-wrapper > .container {
+	display: flex;
+	gap: 4rem;
+	align-items: center;
+}
+
+.header-wrapper_content {
+	display: flex;
+	flex: 1;
+	justify-content: end;
+}
+
+.header-wrapper_group {
+	display: flex;
+    align-items: center;
+	gap: var(--header-menu-gap);
+}
+
+
