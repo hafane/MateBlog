@@ -1,7 +1,7 @@
-import { TAGS_LIST, PAGE_PATHS } from "@utils/constants/consts"
-import { Link } from "react-router"
+import { TAGS_LIST } from "@utils/constants/consts"
 import List from "@/components/list/list"
 import ListItem from "@/components/list/list_item/list-item"
+import Tag from "@/components/tag/tag"
 import cl from "./tag-list.module.css"
 
 const TagList = () => {
@@ -10,7 +10,7 @@ const TagList = () => {
 			<List className={cl["tags-list"]}>
 				{TAGS_LIST.map(tag => (
 					<ListItem key={tag.id + tag.name}>
-						<Link to={PAGE_PATHS.tagsPosts + tag.name}>#{tag.name}</Link>
+						<Tag tag={tag.name} />
 					</ListItem>
 				))}
 			</List>

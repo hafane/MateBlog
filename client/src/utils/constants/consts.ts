@@ -84,6 +84,12 @@ export const TAGS_LIST = [
 	{ id: 4, name: "health" },
 	{ id: 5, name: "travel" },
 	{ id: 6, name: "food" },
-	{ id: 7, name: "fashion" },
-	{ id: 8, name: "fitness" },
+]
+
+export const MOCK_COMMENTS = [
+	{id: 1, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Great post!", postId: 1},
+	{id: 2, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Great post!", postId: 1},
+	{id: 3, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Great post!", postId: 1},
+	{id: 4, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Hello hi dfsdfsdfdsssssssssssssssssssss sdfs fsdf sdf sdf sd", postId: 1},
+	{id: 5, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Lorem ipsum dolor sit amet et consectetur adipiscing elit fab ewrwe ewr wrwe rwer wer wer wer wr were ", postId: 1},
 ]

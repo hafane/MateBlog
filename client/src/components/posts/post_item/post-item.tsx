@@ -7,6 +7,7 @@ import Button from "@/components/ui/button/button"
 import cl from "./post-item.module.css"
 import Image from "@/assets/Image.png" //del this later
 import authorImg from "@/assets/Image(1).png" //del this later
+import Tag from "@/components/tag/tag"
 
 const PostItem = ({ post, options }: PostItemProps) => {
 	return (
@@ -39,10 +40,7 @@ const PostItem = ({ post, options }: PostItemProps) => {
 				<div className={cl["post_content"]}>
 					<div className={cl["post_tags"]}>
 						{post.tags.map(tag => (
-							<Link key={tag} className={cl["tag"]} to={PAGE_PATHS.tagsPosts + tag}>
-								<span className={cl["tag-prefix"]}>#</span>
-								{tag}
-							</Link>
+							<Tag key={tag} tag={tag} />
 						))}
 					</div>
 					<h2 className={cl["post_title"]}>

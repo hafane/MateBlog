@@ -5,7 +5,7 @@
 .field {
 	width: 100%;
 	font-size: 1rem;
-	padding: 0.6rem 1.2rem 0.6rem 0.4rem;
+	padding: 0.6rem 1.7rem 0.6rem 0.4rem;
     background-color: var(--input-background);
 	transition: background-color .3s ease;
 	color: #a1a1aa;
@@ -20,7 +20,7 @@
 	height: 100%;
 	font-size: 1rem;
 	top: 0;
-	right: 0;
+	right: 10px;
 	color: #52525B;
     outline-color: var(--primary-color);
 }
