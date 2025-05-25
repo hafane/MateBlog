@@ -4,19 +4,23 @@ import Logo from "../ui/logo/logo"
 import Search from "./group/search"
 import Theme from "./group/theme"
 import cl from "./header.module.css"
+import Write from "./group/write"
+import UserMenu from "./group/user_menu/user-menu"
 
 const Header = () => {
 	return (
-		<header className={cl["header-wrapper"]}>
+		<header className={cl["header"]}>
 			<div className={classnames(cl["container"], "container")}>
-				<Link aria-label="Logo, back to main page" to="/">
-					<Logo className="logo" />
-				</Link>
-				<div className={cl["header-wrapper_content"]}>
-					<div className={cl["header-wrapper_group"]}>
-						<Search/>
-						<Theme/>
-					</div>
+				<div className={cl["header-left"]}>
+					<Link aria-label="Logo, back to main page" to="/">
+						<Logo className="logo" />
+					</Link>
+					<Search />
+				</div>
+				<div className={cl["header-right"]}>
+					<Write/>
+					<UserMenu/>
+					<Theme />
 				</div>
 			</div>
 		</header>

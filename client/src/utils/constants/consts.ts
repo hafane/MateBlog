@@ -23,7 +23,7 @@ export const PAGE_PATHS = {
 	tagsPosts: "/t/",
 	postPage: "/post/",
 	authorPage: "/author/",
-	editor: "/write-blog",
+	editor: "/editor",
 	home: "/",
 }
 
@@ -92,4 +92,9 @@ export const MOCK_COMMENTS = [
 	{id: 3, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Great post!", postId: 1},
 	{id: 4, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Hello hi dfsdfsdfdsssssssssssssssssssss sdfs fsdf sdf sdf sd", postId: 1},
 	{id: 5, author: "John Doe", authorImage: "", date: "August 20, 2022", text: "Lorem ipsum dolor sit amet et consectetur adipiscing elit fab ewrwe ewr wrwe rwer wer wer wer wr were ", postId: 1},
+]
+
+export const USER_MENU = [
+	{ name: "Profile", path: "/profile" },
+	{ name: "Bookmarks", path: "/bookmarks" },
 ]

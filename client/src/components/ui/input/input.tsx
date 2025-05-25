@@ -1,5 +1,5 @@
 import MaterialIcons from "../icons/material-icons"
-import { InputProps } from "./input-type"
+import { TInputProps } from "./input-type"
 import classnames from "classnames"
 import cl from "./input.module.css"
 
@@ -9,7 +9,7 @@ const Input = ({
 	InputClassName,
 	labelText,
 	...props
-}: InputProps) => {
+}: TInputProps) => {
 	return (
 		<label className={cl["input"]} htmlFor={props.id}>
 			{labelText}

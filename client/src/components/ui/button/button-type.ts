@@ -1,4 +1,4 @@
-export interface ButtonPropsType extends React.ComponentProps<"button"> {
+export type ButtonPropsType = {
     children: React.ReactNode
     className?: string
-}
+} & React.ComponentProps<"button">

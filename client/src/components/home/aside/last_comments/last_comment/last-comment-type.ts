@@ -1,4 +1,4 @@
-export interface ILastComment {
+export type ILastComment = {
     comment: {
         id: number;
         authorImage: string;
