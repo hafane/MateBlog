@@ -15,14 +15,14 @@ const UserMenu = () => {
 			<Button aria-expanded={isOpen} className={cl["menu-button"]} onClick={() => setIsOpen(!isOpen)}>
 				<img src={image} width={30} height={30} alt="" />
 			</Button>
-			<Menu isOpen={isOpen}>
+			<Menu onClose={setIsOpen} isOpen={isOpen}>
 				{USER_MENU.map(item => (
 					<MenuItem key={item.name}>
 						<Link className={cl["item-link"]} to={item.path}>{item.name}</Link>
 					</MenuItem>
 				))}
 				<MenuItem onClick={() => console.log("You Logged Out")}>
-                    Logout
+                    Sign Out
                 </MenuItem>
 			</Menu>
 		</div>

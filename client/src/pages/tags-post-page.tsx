@@ -1,10 +1,7 @@
+import TagsPostContent from "@/components/tags_post/tags-post-content"
 
 const TagsPostPage = () => {
-    return (
-        <>
-            <h1>tags</h1>
-        </>
-    );
+	return <TagsPostContent />
 }
 
-export default TagsPostPage;
+export default TagsPostPage

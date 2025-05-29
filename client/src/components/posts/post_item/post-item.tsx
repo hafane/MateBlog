@@ -3,11 +3,11 @@ import { Link } from "react-router"
 import { PAGE_PATHS } from "@/utils/constants/consts"
 import classnames from "classnames"
 import MaterialIcons from "@/components/ui/icons/material-icons"
+import Tag from "@/components/tag/tag"
 import Button from "@/components/ui/button/button"
 import cl from "./post-item.module.css"
 import Image from "@/assets/Image.png" //del this later
 import authorImg from "@/assets/Image(1).png" //del this later
-import Tag from "@/components/tag/tag"
 
 const PostItem = ({ post, options }: PostItemProps) => {
 	return (

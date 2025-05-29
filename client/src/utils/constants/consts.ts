@@ -1,3 +1,4 @@
+import { MaterialIconsType } from "@/components/ui/icons/material-icons-type"
 
 export const NAVIGATION_ITEMS = [
 	{ name: "Home", path: "/" },
@@ -98,3 +99,14 @@ export const USER_MENU = [
 	{ name: "Profile", path: "/profile" },
 	{ name: "Bookmarks", path: "/bookmarks" },
 ]
+
+export const AUTHOR: {socials: {platform: MaterialIconsType; url: string}[]; name: string; sign: string; description: string} = {
+	name: "Jonathan Doe",
+	sign: "Collaborator & Editor",
+	description: "Meet Jonathan Doe, a passionate writer and blogger with a love for technology and travel. Jonathan holds a degree in Computer Science and has spent years working in the tech industry, gaining a deep understanding of the impact technology has on our lives.",
+	socials: [
+		{ platform: "MdFacebook", url: "https://www.facebook.com/" },
+		{ platform: "MdFacebook", url: "https://twitter.com/" },
+		{ platform: "MdFacebook", url: "https://www.instagram.com/" },
+	],
+}

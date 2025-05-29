@@ -1,0 +1,4 @@
+.author-main {
+    display: grid;
+    grid-template-columns: var(--posts-grid-col);
+}

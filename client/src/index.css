@@ -3,6 +3,8 @@
 	--header-menu-gap: 2.5rem;
 	--card-border: 0.75rem;
 
+	--posts-grid-col: repeat(3, minmax(0, 1fr));
+
 	--primary-color: #4b6bfb;
 	--primary-color-rgb: 75, 107, 251;
 	--secondary-900: #141624;
@@ -20,6 +22,7 @@
 	--background-color: #ffffff;
 
 	--input-background: #f4f4f5;
+	--author-card-bg: #F6F6F7;
 	--card-background: #ffffff;
 	--footer-links-color: #3b3c4a;
 	--bg-btn-hover: #97989f20;
@@ -64,6 +67,7 @@ p {
 		--title-color: #ffffff;
 		--background-color: #181a2a;
 		--input-background: #242535;
+		--author-card-bg: #242535;
 		--card-background: #181a2a;
 		--border-color-100: #24253592;
 		--footer-links-color: #BABABF;
@@ -79,24 +83,4 @@ p {
 	max-width: var(--layout-width);
 	width: 100%;
 	margin: 0 auto;
-}
-
-.animate-fade {
-	visibility: hidden;
-	opacity: 0;
-	transform: translateY(15px);
-	animation: fadeIn 0.3s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(15px);
-	}
-	to {
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-	}
 }

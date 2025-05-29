@@ -15,9 +15,8 @@
     padding: 0.5rem 0;
     border: none;
     border-radius: 0;
-    color: var(--title-color);
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: var(--secondary-500);
+    font-size: 1.2rem;
     transition: color 0.3s ease;
     text-transform: capitalize;
 
