@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/consts"
+import { PAGE_PATHS } from "@/utils/constants/data"
 import App from "../App"
 import ErrorBoundary from "./error-boundary"
 import Loader from "@/components/loader/loader"

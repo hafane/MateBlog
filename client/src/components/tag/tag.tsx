@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/consts"
+import { PAGE_PATHS } from "@/utils/constants/data"
 import cl from "./tag.module.css"
 
 const Tag = ({ tag }: { tag: string }) => {

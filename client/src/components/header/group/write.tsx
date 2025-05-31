@@ -1,4 +1,4 @@
-import { PAGE_PATHS } from "@/utils/constants/consts"
+import { PAGE_PATHS } from "@/utils/constants/data"
 import LinkIcon from "@/components/ui/link_icon/link-icon"
 
 const Write = () => {

@@ -1,4 +1,4 @@
-import HomeContent from "@/components/home/home-content"
+import HomeContent from "@/components/screens/home/home-content"
 
 const HomePage = () => {
 

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { HOME_TABS } from "@/utils/constants/consts"
+import { HOME_TABS } from "@/utils/constants/data"
 import classnames from "classnames"
 import Button from "@/components/ui/button/button"
 import cl from "./home-head.module.css"

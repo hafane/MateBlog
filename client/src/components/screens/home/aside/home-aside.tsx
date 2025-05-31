@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { SOCIALS } from "@/utils/constants/consts"
+import { SOCIALS } from "@/utils/constants/data"
 import cl from "./home-aside.module.css"
 import TagList from "./tag_list/tag-list"
 import LastComments from "./last_comments/last-comments"

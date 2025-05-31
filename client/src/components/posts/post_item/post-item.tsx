@@ -1,6 +1,6 @@
 import { PostItemProps } from "./post-item-type"
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/consts"
+import { PAGE_PATHS } from "@/utils/constants/data"
 import classnames from "classnames"
 import MaterialIcons from "@/components/ui/icons/material-icons"
 import Tag from "@/components/tag/tag"

@@ -1,4 +1,4 @@
-import { TAGS_LIST } from "@utils/constants/consts"
+import { TAGS_LIST } from "@/utils/constants/data"
 import List from "@/components/list/list"
 import ListItem from "@/components/list/list_item/list-item"
 import Tag from "@/components/tag/tag"

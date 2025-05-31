@@ -20,7 +20,11 @@ const AuthorHead = ({ author }: AuthorHeadProps) => {
 				<ul className={cl["author-socials"]}>
 					{author.socials.map((social, index) => (
 						<li key={index} className={cl["social-item"]}>
-							<LinkWithIcon iconName={social.platform} path={social.url} className={cl["social-link"]} />
+							<LinkWithIcon
+								iconFa6Name={social.platform}
+								path={social.url}
+								className={cl["social-link"]}
+							/>
 						</li>
 					))}
 				</ul>

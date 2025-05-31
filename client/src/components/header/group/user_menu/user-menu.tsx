@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router"
-import { USER_MENU } from "@/utils/constants/consts"
+import { USER_MENU } from "@/utils/constants/data"
 import Button from "@/components/ui/button/button"
 import Menu from "@/components/menu/menu"
 import MenuItem from "@/components/menu/menu_item/menu-item"

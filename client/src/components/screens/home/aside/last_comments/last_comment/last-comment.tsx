@@ -1,4 +1,4 @@
-import { PAGE_PATHS } from "@/utils/constants/consts"
+import { PAGE_PATHS } from "@/utils/constants/data"
 import { ILastComment } from "./last-comment-type"
 import avatar from "@assets/Image(1).png" //delete this later
 import cl from "../last-comments.module.css"

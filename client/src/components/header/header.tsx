@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/consts"
+import { PAGE_PATHS } from "@/utils/constants/data"
 import classnames from "classnames"
 import Logo from "../ui/logo/logo"
 import Search from "./group/search"

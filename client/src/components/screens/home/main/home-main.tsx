@@ -1,4 +1,4 @@
-import { MOCK_POSTS } from "@/utils/constants/consts"
+import { MOCK_POSTS } from "@/utils/constants/data"
 import PostItem from "@/components/posts/post_item/post-item"
 import HomeHead from "../head/home-head"
 import cl from "./home-main.module.css"

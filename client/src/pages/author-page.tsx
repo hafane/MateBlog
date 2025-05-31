@@ -1,4 +1,4 @@
-import AuthorContent from "@/components/author/author-content"
+import AuthorContent from "@/components/screens/author/author-content"
 
 const AuthorPage = () => {
     return <AuthorContent/>

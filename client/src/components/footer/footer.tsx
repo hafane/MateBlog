@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { SOCIALS } from "@/utils/constants/consts"
+import { SOCIALS } from "@/utils/constants/data"
 import classnames from "classnames"
 import cl from "./footer.module.css"
 import Logo from "../ui/logo/logo"
