@@ -1,6 +1,6 @@
 import HomeAside from "./aside/home-aside"
-import cl from "./home-content.module.css"
 import HomeMain from "./main/home-main"
+import cl from "./home-content.module.css"
 
 const HomeContent = () => {
 

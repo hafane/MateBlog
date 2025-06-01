@@ -3,7 +3,7 @@ import LinkIcon from "@/components/ui/link_icon/link-icon"
 
 const Write = () => {
 	return (
-		<LinkIcon iconName="MdCreate" path={PAGE_PATHS.editor} text="Write Post" aria-label="Write Post" />
+		<LinkIcon iconMaterialName="MdCreate" path={PAGE_PATHS.editor} text="Write Post" aria-label="Write Post" />
 	)
 }
 
