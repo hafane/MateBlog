@@ -1,6 +1,6 @@
 .last-comment {
     display: block;
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
     margin-bottom: 1rem;
 
     &:hover .comment-text {
@@ -8,37 +8,18 @@
     }
 }
 
-.comment-author {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.author {
+.comment-text {
     color: var(--title-color);
-    font-size: 0.875rem;
-    font-weight: thick;
-}
-
-.avatar {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 9999px;
-    background-color: var(--secondary-700);
+    font-size: 1rem;
+    line-height: 1.2rem;
+    transition: opacity .3s ease;
+    overflow: hidden;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
 }
 
 .comment-date {
     color: var(--secondary-500);
     font-weight: 400;
-    font-size: 0.75rem;
-}
-
-.comment-text {
-    color: var(--title-color);
-    font-size: 1rem;
-    line-height: 1.2rem;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
+    font-size: .75rem;
 }

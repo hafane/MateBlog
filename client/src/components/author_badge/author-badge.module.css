@@ -1,0 +1,38 @@
+.author-badge-link {
+	display: inline-flex;
+	align-items: center;
+	color: var(--secondary-600);
+	font-weight: 400;
+}
+
+.author-badge {
+	display: flex;
+	align-items: center;
+	color: var(--secondary-600);
+	font-weight: 400;
+}
+
+.avatar {
+	display: inherit;
+	margin-right: 0.5rem;
+}
+
+.avatar-pic {
+	border-radius: 9999px;
+}
+
+.info {
+	display: block;
+}
+
+.info-name {
+	color: var(--title-color);
+	font-weight: 500;
+	font-size: 0.875rem;
+}
+
+.info-sign {
+	color: var(--secondary-400);
+	font-weight: 400;
+	font-size: 0.75rem;
+}

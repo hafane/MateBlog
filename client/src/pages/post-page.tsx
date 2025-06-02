@@ -1,8 +1,7 @@
+import PostContent from "@/components/screens/post/post-content"
 
 const BlogPage = () => {
-    return (
-        <div>Blog 1234</div>
-    );
+    return <PostContent/>
 }
 
 export default BlogPage;

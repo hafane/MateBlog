@@ -1,0 +1,13 @@
+.post-title {
+    color: var(--title-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+
+.post-author-badge div[class*=_info] {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}

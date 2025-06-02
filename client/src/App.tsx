@@ -1,9 +1,9 @@
 import { Outlet } from "react-router"
 import { observer } from "mobx-react-lite"
 import { themeStore } from "./store/theme-store"
+import { userStore } from "./store/user-store"
 import classnames from "classnames"
 import Header from "@/components/header/header"
-import { userStore } from "./store/user-store"
 
 const App = observer(() => {
 

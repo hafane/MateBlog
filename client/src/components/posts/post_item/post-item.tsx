@@ -5,9 +5,10 @@ import classnames from "classnames"
 import MaterialIcons from "@/components/ui/icons/material-icons"
 import Tag from "@/components/tag/tag"
 import Button from "@/components/ui/button/button"
-import cl from "./post-item.module.css"
-import Image from "@/assets/Image.png" //del this later
+import AuthorBadge from "@/components/author_badge/author-badge"
 import authorImg from "@/assets/Image(1).png" //del this later
+import Image from "@/assets/Image.png" //del this later
+import cl from "./post-item.module.css"
 
 const PostItem = ({ post, options }: PostItemProps) => {
 	return (
@@ -20,23 +21,24 @@ const PostItem = ({ post, options }: PostItemProps) => {
 		>
 			{post.image && (
 				<Link to={PAGE_PATHS.postPage + post.id} className={cl["post_cover"]}>
-					<img className={cl["cover-pic"]} src={Image} alt="Image post" />
+					<img
+						loading="lazy"
+						className={cl["cover-pic"]}
+						src={Image}
+						alt="Image post"
+					/>
 				</Link>
 			)}
 			<div className={cl["post_body"]}>
-				<div className={cl["post_head"]}>
-					<div className={cl["post_author"]}>
-						<div className={cl["avatar"]}>
-							<img className={cl["avatar-pic"]} src={authorImg} alt="author" />
-						</div>
-						<div className={cl["info"]}>
-							<Link to={PAGE_PATHS.authorPage + post.id}>
-								<p className={cl["info-name"]}>{post.author}</p>
-								<time className={cl["info-date"]}>{post.date}</time>
-							</Link>
-						</div>
-					</div>
-				</div>
+				<AuthorBadge
+					author={{
+						avatar: authorImg,
+						name: post.author,
+						id: post.id,
+						sign: post.date,
+					}}
+					isALink
+				/>
 				<div className={cl["post_content"]}>
 					<div className={cl["post_tags"]}>
 						{post.tags.map(tag => (
@@ -44,7 +46,10 @@ const PostItem = ({ post, options }: PostItemProps) => {
 						))}
 					</div>
 					<h2 className={cl["post_title"]}>
-						<Link className={cl["title-link"]} to={PAGE_PATHS.postPage + post.id}>
+						<Link
+							className={cl["title-link"]}
+							to={PAGE_PATHS.postPage + post.id}
+						>
 							{post.title}
 						</Link>
 					</h2>
@@ -63,7 +68,7 @@ const PostItem = ({ post, options }: PostItemProps) => {
 								0 Comments
 							</Link>
 						</div>
-						<Button className={cl["save"]} type="button">
+						<Button variant="primary" className={cl["save"]} type="button">
 							<MaterialIcons name="MdBookmark" />
 						</Button>
 					</div>

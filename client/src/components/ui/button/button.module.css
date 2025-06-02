@@ -1,7 +1,8 @@
 .button {
-    padding: 0.75rem 1.25rem;
+    padding: .75rem 1.25rem;
     background-color: transparent;
-    color: #696A75;
+    color: var(--secondary-500);
+    font-weight: 500;
     border: none;
     font-size: 1rem;
     cursor: pointer;
@@ -9,4 +10,33 @@
     &:focus-visible {
         outline: var(--primary-color) solid 1px;
     }
+}
+
+.button--primary {
+	border: none;
+	padding: .8rem;
+	line-height: .5rem;
+	transition: background-color .3s ease;
+
+	&:hover {
+		background-color: rgba(var(--primary-color-rgb), 0.1);
+        color: var(--primary-color);
+		border-radius: .375rem;
+
+		> svg {
+			color: var(--primary-color);
+		}
+	}
+
+	> svg {
+		height: 1.3rem;
+		width: 1.3rem;
+		color: var(--secondary-400);
+		transition: color .3s ease;
+	}
+}
+
+.button--secondary {
+    border: 1px solid var(--secondary-400);
+    border-radius: .5rem;
 }

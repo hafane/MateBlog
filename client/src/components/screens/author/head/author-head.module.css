@@ -15,34 +15,12 @@
 }
 
 .author-info {
-    display: flex;
-    align-items: center;
     margin-bottom: 1rem;
 }
 
-.avatar {
-    margin-right: 0.8rem;
-}
-
-.avatar-pic {
-    width: 64px;
-    height: 64px;
-    border-radius: 9999px;
-}
-
-.details {
-    display: block;
-}
-
-.name {
+.author-info p[class*=info-name] {
     font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--title-color);
     line-height: 1.2;
-}
-
-.sign {
-    color: var(--secondary-400);
 }
 
 .author-description {

@@ -1,5 +1,6 @@
 import { AuthorHeadProps } from "./author-head.type"
 import LinkWithIcon from "@/components/ui/link_icon/link-icon"
+import AuthorBadge from "@/components/author_badge/author-badge"
 import cl from "./author-head.module.css"
 import authorImg from "@/assets/Image(1).png" // Replace with actual author image path
 
@@ -7,15 +8,7 @@ const AuthorHead = ({ author }: AuthorHeadProps) => {
 	return (
 		<div className={cl["author-head"]}>
 			<div className={cl["content"]}>
-				<div className={cl["author-info"]}>
-					<div className={cl["avatar"]}>
-						<img className={cl["avatar-pic"]} src={authorImg} alt="author" />
-					</div>
-					<div className={cl["details"]}>
-						<p className={cl["name"]}>{author.name}</p>
-						<small className={cl["sign"]}>{author.sign}</small>
-					</div>
-				</div>
+				<AuthorBadge author={{avatar: authorImg, name: author.name, id: 1, sign: author.sign}} avatarHeight={64} avatarWidth={64} classNames={cl["author-info"]} />
 				<p className={cl["author-description"]}>{author.description}</p>
 				<ul className={cl["author-socials"]}>
 					{author.socials.map((social, index) => (
