@@ -1,4 +1,4 @@
-import { MOCK_POSTS } from "@/utils/constants/data"
+import { MOCK_POSTS } from "@/constants/data"
 import PostItem from "@/components/posts/post_item/post-item"
 import cl from "./tags-post-main.module.css"
 

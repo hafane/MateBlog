@@ -4,12 +4,12 @@
     margin-bottom: 1rem;
 
     &:hover .comment-text {
-        opacity: 0.6;
+        opacity: 0.8;
     }
 }
 
 .comment-text {
-    color: var(--title-color);
+    color: var(--secondary-400);
     font-size: 1rem;
     line-height: 1.2rem;
     transition: opacity .3s ease;

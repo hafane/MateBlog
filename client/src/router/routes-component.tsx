@@ -1,10 +1,10 @@
-import { lazy, Suspense } from "react"
+import { lazy } from "react"
 import { Route, Routes } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/data"
-import App from "../App"
-import ErrorBoundary from "./error-boundary"
-import Loader from "@/components/loader/loader"
-import PrivateRoutes from "./privateRoutes"
+import { PagePath } from "@/utils/page-path-config"
+import App from "@/App"
+import Layout from "@/components/screens/layout"
+import ErrorBoundary from "./error_boundary/error-boundary"
+import PrivateRoutes from "./private-routes"
 
 const RoutesComponent = () => {
 	const HomePage = lazy(() => import("../pages/home-page"))
@@ -14,23 +14,23 @@ const RoutesComponent = () => {
 	const EditorPage = lazy(() => import("../pages/editor-page"))
 
 	return (
-		<Suspense fallback={<Loader />}>
-			<Routes>
-				<Route element={<App />}>
+		<Routes>
+			<Route element={<App />}>
+				<Route element={<Layout />}>
 					<Route index Component={HomePage} />
 					<Route
-						path={PAGE_PATHS.tagsPosts + ":tag"}
+						path={PagePath.getTagNamePage(":tag")}
 						Component={TagsPostPage}
 					/>
-					<Route path={PAGE_PATHS.postPage + ":id"} Component={PostPage} />
-					<Route path={PAGE_PATHS.authorPage + ":id"} Component={AuthorPage} />
+					<Route path={PagePath.getPostIdPage(":id")} Component={PostPage} />
+					<Route path={PagePath.getAuthorIdPage(":id")} Component={AuthorPage} />
 					<Route element={<PrivateRoutes />}>
-						<Route path={PAGE_PATHS.editor} Component={EditorPage} />
+						<Route path={PagePath.editor} Component={EditorPage} />
 					</Route>
 				</Route>
 				<Route path="*" element={<ErrorBoundary />} />
-			</Routes>
-		</Suspense>
+			</Route>
+		</Routes>
 	)
 }
 

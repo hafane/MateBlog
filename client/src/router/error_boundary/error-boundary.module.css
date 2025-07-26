@@ -1,0 +1,30 @@
+.error-boundary {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: .6rem;
+}
+
+.error-code {
+    color: var(--title-color);
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    margin: 0;
+    border-right: 2px solid var(--title-color);
+}
+
+.message-container {
+    margin-left: 1rem;
+}
+
+.error-message {
+    color: var(--title-color);
+    font-size: 1rem;
+}

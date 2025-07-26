@@ -35,10 +35,43 @@
 	box-sizing: border-box;
 }
 
+
 html,
 body {
 	font-family: "Work Sans", sans-serif;
+	background-color: var(--background-color);
+	height: 100%;
 	font-size: 1rem;
+
+	&.dark {
+		--secondary-900: #ffffff;
+		--secondary-700: #242535;
+		--secondary-600: #ffffff;
+		--title-color: #ffffff;
+		--background-color: #181a2a;
+		--input-background: #242535;
+		--author-card-bg: #242535;
+		--card-background: #181a2a;
+		--border-color-100: #24253592;
+		--footer-links-color: #BABABF;
+	}
+}
+
+::-webkit-scrollbar {
+	width: .5rem
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--secondary-500);
+	border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	opacity: 0.6;
 }
 
 a {
@@ -54,24 +87,9 @@ p {
 	margin: 0;
 }
 
-
 .wrapper {
-	height: 100%;
 	background-color: var(--background-color);
 	transition: background-color 0.3s ease;
-	
-	&.dark {
-		--secondary-900: #ffffff;
-		--secondary-700: #242535;
-		--secondary-600: #ffffff;
-		--title-color: #ffffff;
-		--background-color: #181a2a;
-		--input-background: #242535;
-		--author-card-bg: #242535;
-		--card-background: #181a2a;
-		--border-color-100: #24253592;
-		--footer-links-color: #BABABF;
-	}
 }
 
 .logo > path {

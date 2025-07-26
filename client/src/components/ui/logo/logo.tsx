@@ -1,6 +1,6 @@
-import { ComponentProps } from "react"
+import { ComponentProps, memo } from "react"
 
-const Logo = ({...props}: ComponentProps<"svg">) => {
+const Logo = memo(({...props}: ComponentProps<"svg">) => {
 	return (
 		<svg
 			width="156"
@@ -60,6 +60,6 @@ const Logo = ({...props}: ComponentProps<"svg">) => {
 			/>
 		</svg>
 	)
-}
+})
 
 export default Logo

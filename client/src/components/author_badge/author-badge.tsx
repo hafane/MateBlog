@@ -1,6 +1,6 @@
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/data"
 import { AuthorBadgeProps } from "./author-badge-type"
+import { PagePath } from "@/utils/page-path-config"
 import classnames from "classnames"
 import cl from "./author-badge.module.css"
 
@@ -35,7 +35,7 @@ const AuthorBadge = ({
 	return isALink ? (
 		<Link
 			className={classnames(cl["author-badge-link"], classNames)}
-			to={PAGE_PATHS.authorPage + author.id}
+			to={PagePath.getAuthorIdPage(`${author.id}`)}
 		>
 			{AuthorBadgeBody}
 		</Link>

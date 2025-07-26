@@ -1,20 +1,13 @@
 import { Outlet } from "react-router"
 import { observer } from "mobx-react-lite"
-import { themeStore } from "./store/theme-store"
-import { userStore } from "./store/user-store"
-import classnames from "classnames"
-import Header from "@/components/header/header"
+import { useTheme } from "./hooks/useTheme"
 
 const App = observer(() => {
-
-	const auth = userStore.isUserAuth
+	useTheme()
 
 	return (
-		<div className={classnames(themeStore.isDark === "dark" ? "dark" : "light", "wrapper")}>
-			<Header />
-			<div className="container">
-				<Outlet context={auth} />
-			</div>
+		<div className="wrapper">
+			<Outlet />
 		</div>
 	)
 })

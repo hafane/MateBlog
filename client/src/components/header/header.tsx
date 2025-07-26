@@ -1,5 +1,6 @@
+import { useEffect, useRef } from "react"
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/data"
+import { PagePath } from "@/utils/page-path-config"
 import classnames from "classnames"
 import Logo from "../ui/logo/logo"
 import Search from "./group/search"
@@ -9,18 +10,34 @@ import UserMenu from "./group/user_menu/user-menu"
 import cl from "./header.module.css"
 
 const Header = () => {
+	const ref = useRef<HTMLDivElement>(null)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (ref) {
+				if (window.scrollY > ref.current!.offsetHeight) {
+					ref.current?.classList.add(cl["scrolled"])
+				} else {
+					ref.current?.classList.remove(cl["scrolled"])
+				}
+			}
+		}
+		window.addEventListener("scroll", handleScroll)
+		return () => window.removeEventListener("scroll", handleScroll)
+	}, [])
+
 	return (
-		<header className={cl["header"]}>
+		<header ref={ref} className={cl["header"]}>
 			<div className={classnames(cl["container"], "container")}>
 				<div className={cl["header-left"]}>
-					<Link aria-label="Logo, back to main page" to={PAGE_PATHS.home}>
+					<Link aria-label="Logo, back to main page" to={PagePath.home}>
 						<Logo className="logo" />
 					</Link>
 					<Search />
 				</div>
 				<div className={cl["header-right"]}>
-					<Write/>
-					<UserMenu/>
+					<Write />
+					<UserMenu />
 					<Theme />
 				</div>
 			</div>

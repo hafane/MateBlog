@@ -1,7 +1,7 @@
-import TagsPostContent from "@/components/screens/tags_post/tags-post-content"
+import TagsPost from "@/components/screens/tags_post/tags-post"
 
 const TagsPostPage = () => {
-	return <TagsPostContent />
+	return <TagsPost />
 }
 
 export default TagsPostPage

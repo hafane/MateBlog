@@ -1,10 +1,10 @@
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/data"
+import { PagePath } from "@/utils/page-path-config"
 import cl from "./tag.module.css"
 
 const Tag = ({ tag }: { tag: string }) => {
 	return (
-		<Link key={tag} className={cl["tag"]} to={PAGE_PATHS.tagsPosts + tag}>
+		<Link key={tag} className={cl["tag"]} to={PagePath.getTagNamePage(tag)}>
 			<span className={cl["tag-prefix"]}>#</span>
 			{tag}
 		</Link>

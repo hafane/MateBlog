@@ -1,8 +1,8 @@
 import { Link } from "react-router"
-import { SOCIALS } from "@/utils/constants/data"
-import cl from "./home-aside.module.css"
+import { SOCIALS } from "@/constants/data"
 import TagList from "./tag_list/tag-list"
 import LastComments from "./last_comments/last-comments"
+import cl from "./home-aside.module.css"
 
 const HomeAside = () => {
 	return (

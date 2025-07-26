@@ -1,6 +1,6 @@
 import { PostItemProps } from "./post-item-type"
 import { Link } from "react-router"
-import { PAGE_PATHS } from "@/utils/constants/data"
+import { PagePath } from "@/utils/page-path-config"
 import classnames from "classnames"
 import MaterialIcons from "@/components/ui/icons/material-icons"
 import Tag from "@/components/tag/tag"
@@ -19,61 +19,51 @@ const PostItem = ({ post, options }: PostItemProps) => {
 				options?.classNames
 			)}
 		>
-			{post.image && (
-				<Link to={PAGE_PATHS.postPage + post.id} className={cl["post_cover"]}>
-					<img
-						loading="lazy"
-						className={cl["cover-pic"]}
-						src={Image}
-						alt="Image post"
-					/>
-				</Link>
-			)}
-			<div className={cl["post_body"]}>
-				<AuthorBadge
-					author={{
-						avatar: authorImg,
-						name: post.author,
-						id: post.id,
-						sign: post.date,
-					}}
-					isALink
-				/>
-				<div className={cl["post_content"]}>
-					<div className={cl["post_tags"]}>
-						{post.tags.map(tag => (
-							<Tag key={tag} tag={tag} />
-						))}
+			<Link to={PagePath.getPostIdPage(`${post.id}`)}>
+				{post.image && (
+					<div className={cl["post_cover"]}>
+						<img
+							loading="lazy"
+							className={cl["cover-pic"]}
+							src={Image}
+							alt="Image post"
+						/>
 					</div>
-					<h2 className={cl["post_title"]}>
-						<Link
-							className={cl["title-link"]}
-							to={PAGE_PATHS.postPage + post.id}
-						>
-							{post.title}
-						</Link>
-					</h2>
-					<div className={cl["post_details"]}>
-						<div className={cl["comments-reacts"]}>
-							<Link
-								className={cl["comments-reacts_link"]}
-								to={PAGE_PATHS.postPage + post.id}
-							>
-								0 Reactions
-							</Link>
-							<Link
-								className={cl["comments-reacts_link"]}
-								to={PAGE_PATHS.postPage + post.id + "#comments"}
-							>
-								0 Comments
-							</Link>
+				)}
+				<div className={cl["post_body"]}>
+					<AuthorBadge
+						author={{
+							avatar: authorImg,
+							name: post.author,
+							id: post.id,
+							sign: post.date,
+						}}
+						isALink
+					/>
+					<div className={cl["post_content"]}>
+						<div className={cl["post_tags"]}>
+							{post.tags.map(tag => (
+								<Tag key={tag} tag={tag} />
+							))}
 						</div>
-						<Button variant="primary" className={cl["save"]} type="button">
-							<MaterialIcons name="MdBookmark" />
-						</Button>
+						<h2 className={cl["post_title"]}>{post.title}</h2>
+						<div className={cl["post_details"]}>
+							<div className={cl["comments-reacts"]}>
+								<p className={cl["comments-reacts_link"]}>0 Reactions</p>
+								<Link
+									className={cl["comments-reacts_link"]}
+									to={PagePath.getPostIdPage(`${post.id}#comments`)}
+								>
+									0 Comments
+								</Link>
+							</div>
+							<Button variant="primary" className={cl["save"]} type="button">
+								<MaterialIcons name="MdBookmark" />
+							</Button>
+						</div>
 					</div>
 				</div>
-			</div>
+			</Link>
 		</article>
 	)
 }

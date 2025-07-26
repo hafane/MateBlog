@@ -1,7 +1,7 @@
-import PostContent from "@/components/screens/post/post-content"
+import Post from "@/components/screens/post/post"
 
-const BlogPage = () => {
-    return <PostContent/>
+const PostPage = () => {
+    return <Post/>
 }
 
-export default BlogPage;
+export default PostPage;

@@ -1,8 +1,8 @@
-import HomeContent from "@/components/screens/home/home-content"
+import Home from "@/components/screens/home/home"
 
 const HomePage = () => {
 
-	return <HomeContent/>
+	return <Home/>
 }
 
 export default HomePage

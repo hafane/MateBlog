@@ -2,8 +2,3 @@
     display: grid;
     grid-template-columns: var(--posts-grid-col);
 }
-
-.more-button {
-    display: flex;
-    justify-content: center;
-}
