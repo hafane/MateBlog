@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import useDebounce from '@/hooks/useDebounce'
 import Input from '@/components/ui/input/input'
 
 const Search = () => {
     const [value, setValue] = useState<string>("")
+    const debounce = useDebounce(value, 1000)
 
-    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(e.target.value)
-    }
+    useEffect(() => {
+        console.log(debounce);
+    }, [debounce])
 
     return (
-        <Input Icon="MdSearch" aria-label='Search' placeholder="Search" value={value} onChange={handleSearch} />
+        <Input Icon="MdSearch" aria-label='Search' placeholder="Search" value={value} onChange={(e) => setValue(e.target.value)} />
     );
 }
 

@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { themeStore } from "@/store/theme-store"
 
-export function useTheme() {
+export default function useTheme() {
     const theme = themeStore.isDark
 
     useEffect(() => {

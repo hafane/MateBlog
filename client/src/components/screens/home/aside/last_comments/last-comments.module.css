@@ -9,7 +9,7 @@
 }
 
 .comment-text {
-    color: var(--secondary-400);
+    color: var(--secondary-600);
     font-size: 1rem;
     line-height: 1.2rem;
     transition: opacity .3s ease;

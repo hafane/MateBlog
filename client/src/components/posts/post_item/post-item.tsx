@@ -19,51 +19,62 @@ const PostItem = ({ post, options }: PostItemProps) => {
 				options?.classNames
 			)}
 		>
-			<Link to={PagePath.getPostIdPage(`${post.id}`)}>
-				{post.image && (
-					<div className={cl["post_cover"]}>
+			{post.image && (
+				<div className={cl["post_cover"]}>
+					<Link to={PagePath.getPostIdPage(`${post.id}`)}>
 						<img
 							loading="lazy"
 							className={cl["cover-pic"]}
 							src={Image}
 							alt="Image post"
 						/>
+					</Link>
+				</div>
+			)}
+			<div className={cl["post_body"]}>
+				<AuthorBadge
+					author={{
+						avatar: authorImg,
+						name: post.author,
+						id: post.id,
+						sign: post.date,
+					}}
+					isALink
+				/>
+				<div className={cl["post_content"]}>
+					<div className={cl["post_tags"]}>
+						{post.tags.map(tag => (
+							<Tag key={tag} tag={tag} />
+						))}
 					</div>
-				)}
-				<div className={cl["post_body"]}>
-					<AuthorBadge
-						author={{
-							avatar: authorImg,
-							name: post.author,
-							id: post.id,
-							sign: post.date,
-						}}
-						isALink
-					/>
-					<div className={cl["post_content"]}>
-						<div className={cl["post_tags"]}>
-							{post.tags.map(tag => (
-								<Tag key={tag} tag={tag} />
-							))}
+					<h2 className={cl["post_title"]}>
+						<Link to={PagePath.getPostIdPage(`${post.id}`)}>{post.title}</Link>
+					</h2>
+					<div className={cl["post_details"]}>
+						<div className={cl["comments-reacts"]}>
+							<Link
+								to={PagePath.getPostIdPage(`${post.id}`)}
+								className={cl["comments-reacts_link"]}
+							>
+								0 Reactions
+							</Link>
+							<Link
+								className={cl["comments-reacts_link"]}
+								to={PagePath.getPostIdPage(`${post.id}#comments`)}
+							>
+								Add Comment
+							</Link>
 						</div>
-						<h2 className={cl["post_title"]}>{post.title}</h2>
-						<div className={cl["post_details"]}>
-							<div className={cl["comments-reacts"]}>
-								<p className={cl["comments-reacts_link"]}>0 Reactions</p>
-								<Link
-									className={cl["comments-reacts_link"]}
-									to={PagePath.getPostIdPage(`${post.id}#comments`)}
-								>
-									0 Comments
-								</Link>
-							</div>
-							<Button variant="primary" className={cl["save"]} type="button">
-								<MaterialIcons name="MdBookmark" />
-							</Button>
-						</div>
+						<Button
+							onClick={e => e.stopPropagation()}
+							variant="primary"
+							type="button"
+						>
+							<MaterialIcons name="MdBookmark" />
+						</Button>
 					</div>
 				</div>
-			</Link>
+			</div>
 		</article>
 	)
 }

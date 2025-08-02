@@ -1,16 +1,16 @@
 import { RefObject, useRef, useSyncExternalStore } from "react"
 
-type IReturnUio = [RefObject<HTMLElement | null>, boolean]
+type IReturnUio = [RefObject<HTMLDivElement | null>, boolean]
 
 
-function useIntersectionObserver(options: IntersectionObserverInit): IReturnUio {
-    const targetRef = useRef<HTMLElement | null>(null)
+export default function useIntersectionObserver(options: IntersectionObserverInit): IReturnUio {
+    const targetRef = useRef<HTMLDivElement | null>(null)
 
     const getSnapshot = () => {
         if(targetRef.current) {
             const rect = targetRef.current?.getBoundingClientRect()
             if(import.meta.env.DEV) console.log(rect, window.innerHeight)
-            return rect.top >= 0 && Math.floor(rect.bottom) <= window.innerHeight
+            return rect.top >= 0 && rect.bottom <= window.innerHeight
         }
         return false
     }
@@ -27,5 +27,3 @@ function useIntersectionObserver(options: IntersectionObserverInit): IReturnUio 
 
     return [targetRef, isVisible]
 }
-
-export default useIntersectionObserver

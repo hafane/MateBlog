@@ -1,5 +1,5 @@
 .menu {
-	position: fixed;
+	position: relative;
 	z-index: 9999;
 }
 
@@ -14,7 +14,7 @@
 .menu-body {
 	position: absolute;
 	top: 0.7rem;
-	left: 0;
+	left: -1.4rem;
 	animation: opacityIn 0.3s ease;
 	border-radius: 0.3rem;
 	border: 1px solid var(--border-color-100);

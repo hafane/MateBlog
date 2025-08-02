@@ -1,19 +1,20 @@
 .header {
 	top: 0;
-	padding-top: 32px;
-	margin-bottom: 32px;
+	padding-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .header.scrolled {
 	position: sticky;
-	padding-top: 0;
+	padding-top: .7rem;
 	z-index: 9999;
 
 	.container {
 		background-color: var(--background-color);
-		border-bottom: 1px solid var(--border-color-100);
-		padding: .5rem 0 .5rem 0;
-		transition: padding 0.3s ease;
+		border: 1px solid var(--border-color-100);
+		border-radius: .5rem;
+		padding: .5rem;
+		transition: padding .3s ease;
 	}
 }
 

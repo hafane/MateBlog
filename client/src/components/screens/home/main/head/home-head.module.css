@@ -17,7 +17,6 @@
     border-radius: 0;
     color: var(--title-color);
     font-size: 1.2rem;
-    transition: color 0.3s ease;
     text-transform: capitalize;
 
     &:hover {

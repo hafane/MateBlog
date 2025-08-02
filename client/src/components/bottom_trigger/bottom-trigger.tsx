@@ -16,7 +16,7 @@ const BottomTrigger = () => {
     }, [isVisible])
 
     return (
-        <div ref={targetRef} className={cl["footer-btn"]}>
+        <div ref={targetRef} className={cl["trigger-btn"]}>
             <Button variant='primary' onClick={() => console.log("Load more")}>
                 Load more
             </Button>
