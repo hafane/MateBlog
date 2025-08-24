@@ -1,25 +1,14 @@
 .header {
+	position: fixed;
+	right: 0;
+	left: 0;
 	top: 0;
-	padding-top: 2rem;
-	margin-bottom: 2rem;
-}
-
-.header.scrolled {
-	position: sticky;
-	padding-top: .7rem;
 	z-index: 9999;
-
-	.container {
-		background-color: var(--background-color);
-		border: 1px solid var(--border-color-100);
-		border-radius: .5rem;
-		padding: .5rem;
-		transition: padding .3s ease;
-	}
 }
 
 .header > .container {
 	display: flex;
+	height: var(--header-height);
 	gap: 4rem;
 	align-items: center;
 	background-color: var(--background-color);

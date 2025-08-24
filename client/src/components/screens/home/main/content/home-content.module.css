@@ -1,0 +1,8 @@
+.posts {
+    padding-top: 1rem;
+}
+
+.post-items_wrapper {
+    display: flex;
+    justify-content: center;
+}

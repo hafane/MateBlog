@@ -16,7 +16,11 @@
 }
 
 .title {
-	margin: 1rem 0;
+	position: sticky;
+	top: var(--header-height);
+	z-index: 20;
+	background-color: var(--background-color);
+	padding: 1rem 0 .5rem 0;
 }
 
 .title-text {

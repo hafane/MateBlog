@@ -14,7 +14,7 @@
 	display: flex;
 	overflow: hidden;
 	width: 100%;
-	aspect-ratio: 1000 / 480;
+	aspect-ratio: 1000 / 500;
 }
 
 .cover-pic {

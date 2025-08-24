@@ -1,8 +1,3 @@
 .main {
     flex: 1 1 auto;
 }
-
-.post-items_wrapper {
-    display: flex;
-    justify-content: center;
-}

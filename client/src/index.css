@@ -2,6 +2,8 @@
 	--layout-width: 1216px;
 	--header-menu-gap: 2.5rem;
 	--card-border: 0.75rem;
+	--header-height: 3.875rem;
+	--main-page-header-top: 3.5rem;
 
 	--posts-grid-col: repeat(3, minmax(0, 1fr));
 

@@ -4,6 +4,8 @@ import { Outlet } from "react-router"
 import { userStore } from "@/store/user-store"
 import Header from "../header/header"
 import Loader from "../loader/loader"
+import classnames from "classnames"
+import cl from "./layout.module.css"
 
 const Layout = observer(() => {
 	const auth = userStore.isUserAuth
@@ -11,7 +13,7 @@ const Layout = observer(() => {
 	return (
 		<>
 			<Header />
-			<div className="container">
+			<div className={classnames("container", cl["container"])}>
 				<Suspense fallback={<Loader />}>
 					<Outlet context={auth} />
 				</Suspense>
