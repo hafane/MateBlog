@@ -11,6 +11,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
 			default: cl["input--default"],
 			bordered: cl["input--bordered"],
 		}
+		
 
 		return (
 			<fieldset className={classnames(cl["input"], wrapperClassName)} >
