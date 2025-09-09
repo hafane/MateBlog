@@ -1,7 +1,9 @@
 class PagePathConfig {
     readonly home = "/"
     readonly editor = "/editor"
-    readonly login = "/login"
+    readonly auth = "/auth"
+    readonly profile = "/profile"
+    readonly bookmarks = "/bookmarks"
 
     getAuthorIdPage(id: string) {
         return `/author/${id}`
