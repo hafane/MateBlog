@@ -1,15 +1,30 @@
 .input {
 	position: relative;
+	padding: 0;
+	border: none;
+}
+
+.label {
+	color: var(--title-color);
 }
 
 .field {
 	width: 100%;
 	font-size: 1rem;
 	padding: 0.6rem 1.7rem 0.6rem 0.4rem;
-    background-color: var(--input-background);
+	border-radius: 0.3125rem;
+}
+
+.input--default {
 	color: #a1a1aa;
 	border: none;
-	border-radius: 0.3125rem;
+	background-color: var(--input-background);
+}
+
+.input--bordered {
+	color: #a1a1aa;
+	border: 1px solid var(--border-color-100);
+	background-color: var(--background-color);
 }
 
 .icon-wrapper {
@@ -20,6 +35,6 @@
 	font-size: 1rem;
 	top: 0;
 	right: 10px;
-	color: #52525b;
-	outline-color: var(--primary-color);
+	color: #52525B;
+    outline-color: var(--primary-color);
 }
