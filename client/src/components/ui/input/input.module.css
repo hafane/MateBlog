@@ -1,26 +1,15 @@
 .input {
 	position: relative;
-	padding: 0;
-	border: none;
 }
 
 .field {
 	width: 100%;
 	font-size: 1rem;
 	padding: 0.6rem 1.7rem 0.6rem 0.4rem;
-	border-radius: 0.3125rem;
-}
-
-.input--default {
+    background-color: var(--input-background);
 	color: #a1a1aa;
 	border: none;
-	background-color: var(--input-background);
-}
-
-.input--bordered {
-	color: #a1a1aa;
-	border: 1px solid var(--border-color-100);
-	background-color: var(--background-color);
+	border-radius: 0.3125rem;
 }
 
 .icon-wrapper {

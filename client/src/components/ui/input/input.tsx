@@ -26,7 +26,6 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
 			<fieldset className={classnames(cl["input"], wrapperClassName)}>
 				{labelText && <label htmlFor={props.id}>{labelText}</label>}
 				<input
-					id={props.id}
 					ref={ref}
 					type="text"
 					className={classnames(
@@ -44,7 +43,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
 						/>
 					</span>
 				)}
-			</fieldset>
+			</label>
 		)
 	}
 )
