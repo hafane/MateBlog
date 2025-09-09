@@ -43,7 +43,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
 						/>
 					</span>
 				)}
-			</label>
+			</fieldset>
 		)
 	}
 )
