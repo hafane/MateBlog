@@ -13,7 +13,7 @@ const RoutesComponent = () => {
 	const PostPage = lazy(() => import("@/pages/post-page"))
 	const AuthorPage = lazy(() => import("@/pages/author-page"))
 	const EditorPage = lazy(() => import("@/pages/editor-page"))
-	const LoginPage = lazy(() => import("@/pages/auth_page/login-page"))
+	const AuthPage = lazy(() => import("@/pages/auth_page/auth-page"))
 
 	return (
 		<Routes>
@@ -34,7 +34,7 @@ const RoutesComponent = () => {
 					</Route>
 				</Route>
 				<Route element={<LayoutAuth />}>
-					<Route path={PagePath.login} Component={LoginPage} />
+					<Route path={PagePath.auth} Component={AuthPage} />
 				</Route>
 				<Route path="*" element={<ErrorBoundary />} />
 			</Route>

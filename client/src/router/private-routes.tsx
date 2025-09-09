@@ -6,7 +6,7 @@ const PrivateRoutes = () => {
     const context = useOutletContext<boolean>()
 
     if(!context) {
-        return <Navigate to={PagePath.login} replace />
+        return <Navigate to={PagePath.auth} replace />
     }
     
     return <Outlet/> 
