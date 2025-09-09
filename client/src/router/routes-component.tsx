@@ -14,6 +14,8 @@ const RoutesComponent = () => {
 	const AuthorPage = lazy(() => import("@/pages/author-page"))
 	const EditorPage = lazy(() => import("@/pages/editor-page"))
 	const AuthPage = lazy(() => import("@/pages/auth_page/auth-page"))
+	const BookmarkPage = lazy(() => import("@/pages/bookmarks-page"))
+	const ProfilePage = lazy(() => import("@/pages/profile-page"))
 
 	return (
 		<Routes>
@@ -31,6 +33,12 @@ const RoutesComponent = () => {
 					/>
 					<Route element={<PrivateRoutes />}>
 						<Route path={PagePath.editor} Component={EditorPage} />
+					</Route>
+					<Route element={<PrivateRoutes/>}>
+						<Route path={PagePath.bookmarks} Component={BookmarkPage} />
+					</Route>
+					<Route element={<PrivateRoutes/>}>
+						<Route path={PagePath.profile} Component={ProfilePage} />
 					</Route>
 				</Route>
 				<Route element={<LayoutAuth />}>
