@@ -15,5 +15,5 @@ const App = observer(() => {
 		</div>
 	)
 })
-
+ 
 export default App
