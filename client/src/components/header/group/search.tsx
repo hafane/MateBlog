@@ -11,7 +11,7 @@ const Search = () => {
     }, [debounce])
 
     return (
-        <Input Icon="MdSearch" variant='default' aria-label='Search' placeholder="Search" value={value} onChange={(e) => setValue(e.target.value)} />
+        <Input Icon="MdSearch" aria-label='Search' placeholder="Search" value={value} onChange={(e) => setValue(e.target.value)} />
     );
 }
 
