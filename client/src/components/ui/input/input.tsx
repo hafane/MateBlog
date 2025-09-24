@@ -4,6 +4,11 @@ import MaterialIcons from "../icons/material-icons"
 import classnames from "classnames"
 import cl from "./input.module.css"
 
+const variants = {
+	default: cl["input--default"],
+	bordered: cl["input--bordered"],
+}
+
 const Input = forwardRef<HTMLInputElement, TInputProps>(
 	(
 		{
@@ -17,14 +22,13 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
 		},
 		ref
 	) => {
-		const variants = {
-			default: cl["input--default"],
-			bordered: cl["input--bordered"],
-		}
-
 		return (
 			<fieldset className={classnames(cl["input"], wrapperClassName)}>
-				{labelText && <label className={cl["label"]} htmlFor={props.id}>{labelText}</label>}
+				{labelText && (
+					<label className={cl["label"]} htmlFor={props.id}>
+						{labelText}
+					</label>
+				)}
 				<input
 					ref={ref}
 					type="text"
